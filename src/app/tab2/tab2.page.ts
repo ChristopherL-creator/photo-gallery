@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PhotosService } from '../services/photos.service';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(public photoS: PhotosService) {}
+
+  addPhotoToGallery(){
+//  richiamo funzione da photoService
+    this.photoS.addNewToGallery();
+  }
 
 }
