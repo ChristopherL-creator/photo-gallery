@@ -56,7 +56,7 @@ private async readAsBase64(photo: Photo){
 
 //  quando ricevo blob, genero promise
 private convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
-//  
+//  devo chiedere
   const reader = new FileReader();
   reader.onerror = reject;
   reader.onload = () => {
