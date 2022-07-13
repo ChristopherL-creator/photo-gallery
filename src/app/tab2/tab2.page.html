@@ -18,7 +18,7 @@
       <ion-row>
     <!-- ciclo tutte le immagini di photos in photoservice -->
         <ion-col size="6" *ngFor="let photo of photoS.photos; index as position">
-          <ion-img [src]="photo.webviewPath"></ion-img>
+          <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
         </ion-col>
       </ion-row>
     </ion-grid>
